@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="login" namespace="/" extends="base">
+		<action name="login_*" class="action.UserAction" method="{1}">
+			<result name="ok">/manage/header.jsp</result>
+			<result name="false">/manage/login.jsp</result>
+			<result name="dengluok">/index.jsp</result>
+			<result name="denglufalse">/login.jsp</result>
+			<result name="index">/index.jsp</result>
+			<result name="tuichu">/index.jsp</result>
+		</action>
+		<action name="regsiter" class="action.UserAction" method="regsiter">
+			<result name="regsiter">/regsiter.jsp</result>
+		</action>
+	
+		<action name="user_check" class="action.UserAction" method="validate">
+			
+		</action>
+		<action name="user_insert" class="action.UserAction" method="tijiaozhuce">
+			<result name="regsiter" >/regsiter.jsp</result>
+		</action>
+		<action name="about" class="action.UserAction" method="about">
+			<result name="about" >/about.jsp</result>
+		</action>
+		<action name="league" class="action.UserAction" method="league">
+			<result name="league" >/league.jsp</result>
+		</action>
+		<action name="update_pwd" class="action.UserAction" method="updatepwd">
+			<result name="updatepwd">/manage/update_pwd.jsp</result>
+		</action>
+		<action name="admin_check" class="action.UserAction" method="check">			
+		</action>	
+		<action name="updatepwd" class="action.UserAction" method="pwd">
+			
+		</action>
+	</package>
+	
+
+</struts>

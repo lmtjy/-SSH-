@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="HotelCartDetails" table="hotel_cart_details">
+		<id name="did">
+			<generator class="increment"></generator>
+		</id>
+		<many-to-one name="cid" lazy="false"></many-to-one>
+		<property name="productId"></property>
+		<property name="count"></property>
+		<property name="type"></property>
+		<property name="state"></property>
+	</class>
+</hibernate-mapping>
+

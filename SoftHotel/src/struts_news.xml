@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="news" namespace="/news" extends="base">
+		<action name="news_*" class="action.NewsAction" method="{1}">
+			<param name="savePath">upload</param>
+			<result name="newsList">/manage/news.jsp</result>
+			<result name="newsAdd">/manage/add_news.jsp</result>
+			<result name="update">/manage/update_news.jsp</result>
+			<result name="time">/news.jsp</result>
+			<result name="minute">/new.jsp</result>
+		</action>
+	</package>
+</struts>

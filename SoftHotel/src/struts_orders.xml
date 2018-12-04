@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="orders" namespace="/orders" extends="base">
+		<action name="order_*" class="action.OrderManageAction" method="{1}">
+		<result name="order">/manage/order.jsp</result>
+		<result name="orderinfo">/manage/waiting.jsp</result>
+		<result name="init">/manage/header.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="News" table="hotel_news">
+		<id name="newId">
+			<generator class="increment"></generator>
+		</id>
+		<property name="newTitle"></property>
+		<property name="details"></property>
+		<property name="relTime"></property>
+		<property name="newImg"></property>
+		<property name="newType"></property>
+		<one-to-one name="mid" cascade="all"></one-to-one>
+	</class>
+</hibernate-mapping>
+

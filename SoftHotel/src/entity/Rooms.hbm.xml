@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="Rooms" table="hotel_rooms">
+		<id name="rid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="roomNum"></property>
+		<property name="proPrice"></property>
+		<property name="regPrice" column="RegPrice"></property>
+		<property name="houseType"></property>
+		<property name="bedType"></property>
+		<property name="rpic" column="rPic"></property>
+		<property name="lpic"></property>
+		<property name="mating"></property>
+		<property name="bookNum"></property>
+		<property name="cancel"></property>
+	</class>
+</hibernate-mapping>
+

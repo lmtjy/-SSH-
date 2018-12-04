@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="RoomOrderDetail" table="hotel_room_order_detail">
+		<id name="oid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="stime" ></property>
+		<property name="ltime" ></property>
+		<property name="num"></property>
+		<many-to-one name="rid" lazy="false" ></many-to-one>
+		<property name="tname"></property>
+		<property name="mobile"></property>
+		<property name="pay"></property>
+		<property name="tprice"></property>
+		<property name="orderNum"></property>
+		<property name="orderTime" column="ordertime" ></property>
+		<property name="remark"></property>
+	</class>
+</hibernate-mapping>
+

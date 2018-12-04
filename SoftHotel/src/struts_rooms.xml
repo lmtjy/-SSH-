@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="room" namespace="/room" extends="base">
+		<action name="room_*" class="action.RoomsAction" method="{1}">
+			<result name="reservation">/reservation.jsp</result>
+			<result name="room_detail">/room_detail.jsp</result>
+			<result name="room_order">/room_order.jsp</result>
+		</action>
+		<action name="order_*" class="action.RoomAddCardAction" method="{1}">
+			<result name="room_order">/room_order.jsp</result>
+			<result name="room_detail">/room_detail.jsp</result>
+			<result name="myOrder">/myOrder.jsp</result>
+		</action>
+		<action name="myorder_*" class="action.MyOrderAction" method="{1}">
+			<result name="room_order">/room_order.jsp</result>
+			<result name="myOrder">/myOrder.jsp</result>
+			<result name="orderAdd">/orderAdd.jsp</result>
+		</action>
+	</package>
+</struts>

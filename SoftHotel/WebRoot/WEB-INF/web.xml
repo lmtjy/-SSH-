@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"     
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<!-- Welcome File List -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- WebApp Root-->
+	 <context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>SoftHotel</param-value>
+	</context-param>
+
+	<!-- Spring Encoding Filter -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+        </filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<!-- Spring Encoding Filter Mapping -->
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- Struts2 Filter -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+	<!-- Struts2 Filter Mapping -->
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Log4j ConfigurationFile Location -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j.properties</param-value>
+	</context-param>
+
+	<!-- Spring Log4j Listener -->
+	<listener>
+		<listener-class>
+            org.springframework.web.util.Log4jConfigListener
+        </listener-class>
+	</listener>
+
+	<!-- Spring ConfigurationFile Location -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+
+	<!-- Spring Context Listener -->
+	<listener>
+		<listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+	</listener>
+
+	<!-- Spring Web Request Listener -->
+	<listener>
+		<listener-class>
+            org.springframework.web.context.request.RequestContextListener
+        </listener-class>
+	</listener>
+
+	<!-- Spring Introspector Cleanup Listener spring -->
+	<listener>
+		<listener-class>
+            org.springframework.web.util.IntrospectorCleanupListener
+        </listener-class>
+	</listener>
+
+</web-app>

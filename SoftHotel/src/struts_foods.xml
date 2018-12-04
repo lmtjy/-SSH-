@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="foods" namespace="/foods" extends="base">
+		<action name="foods_*" class="action.FoodsAction" method="{1}">
+		<param name="savePath">images\\meal\\food\\</param>
+			<result name="foodslist">/catering.jsp</result>
+			<result name="foodsajax">/foodsajax.jsp</result>
+			<result name="dish">/manage/dish.jsp</result>
+			<result name="adddish">/manage/add_dish.jsp</result>
+			<result name="update">/manage/add_dish.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="Minute" table="hotel_minute">
+		<id name="mid">
+			<generator class="foreign">
+				<param name="property">newId</param>
+			</generator>
+		</id>
+		<property name="mtitle"></property>
+		<property name="mdetails"></property>
+		<property name="stime"></property>
+		<property name="otime"></property>
+		<one-to-one name="newId" constrained="true"></one-to-one>
+	</class>
+</hibernate-mapping>
+

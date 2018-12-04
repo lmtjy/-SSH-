@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="UserViews" table="hotel_user_views">
+		<id name="vId">
+			<generator class="increment"></generator>
+		</id>
+		<many-to-one name="uId" lazy="false"></many-to-one>
+		<property name="vdetail"></property>
+		<property name="reply"></property>
+		<property name="grade"></property>
+		<property name="postTime"></property>
+	</class>
+</hibernate-mapping>
+

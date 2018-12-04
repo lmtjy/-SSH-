@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>		
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.show_sql">true</property>
+		<mapping resource="entity/HotelCart.hbm.xml"/>
+		<mapping resource="entity/HotelCartDetails.hbm.xml"/>
+		<mapping resource="entity/HotelOrder.hbm.xml"/>
+		<mapping resource="entity/HotelOrderDetail.hbm.xml"/>
+		<mapping resource="entity/Foods.hbm.xml"/>
+		<mapping resource="entity/News.hbm.xml"/>
+		<mapping resource="entity/RoomOrderDetail.hbm.xml"/>
+		<mapping resource="entity/Rooms.hbm.xml"/>
+		<mapping resource="entity/User.hbm.xml"/>
+		<mapping resource="entity/UserViews.hbm.xml"/>
+		<mapping resource="entity/Minute.hbm.xml"/>
+		<mapping resource="entity/Recruit.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

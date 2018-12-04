@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="roommanage" namespace="/roommanage" extends="base">
+		<action name="room_*" class="action.RoomsManageAction" method="{1}">
+		<param name="savePath">images/hotel</param>
+			<result name="query">/manage/index.jsp</result> 
+			<result name="update">/manage/update_index.jsp</result>
+			<result name="add">/manage/update_index.jsp</result>
+			<result name="updateRe">/manage/index.jsp</result>
+		</action>
+	</package>
+</struts>

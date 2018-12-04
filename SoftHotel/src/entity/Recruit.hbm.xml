@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="Recruit" table="hotel_recruit">
+		<id name="new_rid">
+			<generator class="increment"></generator>
+		</id>
+		<property name="rname"></property>
+		<property name="rnumber"></property>
+		<property name="smoney"></property>
+		<property name="omoney"></property>
+		<property name="requiren"></property>
+	</class>
+</hibernate-mapping>
+
